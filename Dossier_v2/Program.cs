@@ -4,10 +4,10 @@
     {
         static void Main(string[] args)
         {
-            const string MenuAddDossier = "D1";
-            const string MenuWriteDossiers = "D2";
-            const string MenuDeleteDossier = "D3";
-            const string CommandExit = "D4";
+            const string CommandAddDossier = "1";
+            const string CommandWriteDossiers = "2";
+            const string CommandDeleteDossier = "3";
+            const string CommandExit = "4";
 
             List<string> names = new List<string>();
             List<string> posts = new List<string>();
@@ -20,24 +20,24 @@
                 Console.Clear();
                 Console.CursorVisible = false;
 
-                Console.WriteLine($"\n{MenuAddDossier.Remove(0, 1)}) добавить досье" +
-                                  $"\n{MenuWriteDossiers.Remove(0, 1)}) вывести все досье" +
-                                  $"\n{MenuDeleteDossier.Remove(0, 1)}) удалить досье" +
-                                  $"\n{CommandExit.Remove(0, 1)}) выход");
+                Console.WriteLine($"\n{CommandAddDossier}) добавить досье" +
+                                  $"\n{CommandWriteDossiers}) вывести все досье" +
+                                  $"\n{CommandDeleteDossier}) удалить досье" +
+                                  $"\n{CommandExit}) выход");
 
-                userInput = Console.ReadKey(true).Key.ToString();
+                userInput = Console.ReadLine();
 
                 switch (userInput)
                 {
-                    case MenuAddDossier:
+                    case CommandAddDossier:
                         AddDossier(employees);
                         break;
 
-                    case MenuWriteDossiers:
+                    case CommandWriteDossiers:
                         WriteAllDossiers(employees);
                         break;
 
-                    case MenuDeleteDossier:
+                    case CommandDeleteDossier:
                         DeliteDossier(employees);
                         break;
 
