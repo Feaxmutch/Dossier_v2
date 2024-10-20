@@ -9,8 +9,6 @@
             const string CommandDeleteDossier = "3";
             const string CommandExit = "4";
 
-            List<string> names = new List<string>();
-            List<string> posts = new List<string>();
             Dictionary<string, List<string>> employees = new();
             string userInput = string.Empty;
             bool isWorking = true;
